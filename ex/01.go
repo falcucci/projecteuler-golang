@@ -1,6 +1,5 @@
 /* <- project euler
 
-
 Copyright © 2018 falcucci
 
 Permission is hereby granted, free of charge, to any person obtaining
