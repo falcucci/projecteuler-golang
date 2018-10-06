@@ -1,6 +1,7 @@
-/* <- project euler exercise 01
+/* <- project euler
 
-Copyright © 2018 yourname
+
+Copyright © 2018 falcucci
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the "Software"),
@@ -20,9 +21,15 @@ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+///////////////////
+//  exercide 01  //
+///////////////////
+
 If we list all the natural numbers below 10
 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 */
 package main
+
+ 
