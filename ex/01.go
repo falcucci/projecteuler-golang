@@ -1,5 +1,4 @@
-/* <- project euler
-
+/*
 Copyright © 2018 falcucci
 
 Permission is hereby granted, free of charge, to any person obtaining
@@ -24,8 +23,8 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //  exercide 01  //
 ///////////////////
 
-If we list all the natural numbers below 10
-that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+If we list all the natural numbers below 10 that are multiples of 3 or 5,
+we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 */
@@ -35,7 +34,8 @@ import (
 	"fmt"
 )
 
-func has(slice []int, item int) bool {
+/* method to verify if an item exists in a Slice */
+func Has(slice []int, item int) bool {
 	for _, v := range slice {
 		if v == item {
 			return true
@@ -44,12 +44,13 @@ func has(slice []int, item int) bool {
 	return false
 }
 
-func GetMuilpleOf(nums []int) int {
+/* sum of the multiple based on any numbers */
+func SumMultiples(nums []int) int {
 	var multiples []int
 	var sum int
 	for _, v := range nums {
 		for _, n := range nums {
-			if 3*n == v || 5*n == v && !has(multiples, v) {
+			if (3*n == v || 5*n == v) && !Has(multiples, v) {
 				sum += v
 				multiples = append(multiples, v)
 			}
@@ -69,5 +70,5 @@ func BuildSlice(max int) []int {
 func main() {
 	numbers := BuildSlice(1000)
 	fmt.Println(numbers)
-	GetMuilpleOf(numbers)
+	SumMultiples(numbers)
 }
