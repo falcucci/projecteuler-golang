@@ -45,12 +45,10 @@ func Fibonacci(limit int) int {
 	i := 0
 	r := 1
 	sum := 0
-	terms := []int{}
 	for i < limit {
 		i, r = r, i+r
 		if r%2 == 0 {
 			sum += r
-			terms = append(terms, r)
 		}
 	}
 	return sum
