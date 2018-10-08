@@ -41,18 +41,22 @@ import (
 )
 
 /* generate a fibonacci sequence based in the max of terms given */
-func Fibonacci(limit int) []int {
+func Fibonacci(limit int) int {
 	i := 0
 	r := 1
+	sum := 0
 	terms := []int{}
-	for i < 100 {
+	for i < limit {
 		i, r = r, i+r
-		terms = append(terms, r)
+		if r%2 == 0 {
+			sum += r
+			terms = append(terms, r)
+		}
 	}
-	fmt.Println(terms)
-	return terms
+	return sum
 }
 
 func main() {
-	Fibonacci(10)
+	sum := Fibonacci(4000000)
+	fmt.Println(sum)
 }
