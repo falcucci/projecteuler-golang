@@ -35,15 +35,40 @@ import (
 	"fmt"
 )
 
+func has(slice []int, item int) bool {
+	for _, v := range slice {
+		if v == item {
+			return true
+		}
+	}
+	return false
+}
+
+func GetMuilpleOf(nums []int) int {
+	var multiples []int
+	var sum int
+	for _, v := range nums {
+		for _, n := range nums {
+			if 3*n == v || 5*n == v && !has(multiples, v) {
+				sum += v
+				multiples = append(multiples, v)
+			}
+		}
+	}
+
+	return sum
+}
+
 func BuildSlice(max int) []int {
-	slice := make([]int, max+1)
+	slice := make([]int, max-1)
 	for k := range slice {
-		slice[k] = k
+		slice[k] = k + 1
 	}
 	return slice
 }
 
 func main() {
-	numbers := BuildSlice(10)
+	numbers := BuildSlice(1000)
 	fmt.Println(numbers)
+	GetMuilpleOf(numbers)
 }
