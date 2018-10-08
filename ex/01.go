@@ -55,7 +55,6 @@ func GetMuilpleOf(nums []int) int {
 			}
 		}
 	}
-
 	return sum
 }
 
