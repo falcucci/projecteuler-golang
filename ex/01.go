@@ -35,8 +35,15 @@ import (
 	"fmt"
 )
 
-func main() {
-	test := "hello world"
+func BuildSlice(max int) []int {
+	slice := make([]int, max+1)
+	for k := range slice {
+		slice[k] = k
+	}
+	return slice
+}
 
-	fmt.Printf("%s\n", test)
+func main() {
+	numbers := BuildSlice(10)
+	fmt.Println(numbers)
 }
