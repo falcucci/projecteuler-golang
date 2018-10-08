@@ -56,7 +56,6 @@ func SumMultiples(nums []int) int {
 			}
 		}
 	}
-	fmt.Println(sum)
 	return sum
 }
 
@@ -70,5 +69,6 @@ func BuildSlice(max int) []int {
 
 func main() {
 	numbers := BuildSlice(1000)
-	SumMultiples(numbers)
+	sum := SumMultiples(numbers)
+	fmt.Println(sum)
 }
