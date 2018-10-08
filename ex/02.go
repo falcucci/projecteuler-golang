@@ -36,6 +36,11 @@ terms.
 
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
-	return true
+	initial := []int{1, 2}
+	fmt.Println(initial)
 }
