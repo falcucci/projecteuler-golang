@@ -40,7 +40,19 @@ import (
 	"fmt"
 )
 
+/* generate a fibonacci sequence based in the max of terms given */
+func Fibonacci(limit int) []int {
+	i := 0
+	r := 1
+	terms := []int{}
+	for i < 100 {
+		i, r = r, i+r
+		terms = append(terms, r)
+	}
+	fmt.Println(terms)
+	return terms
+}
+
 func main() {
-	initial := []int{1, 2}
-	fmt.Println(initial)
+	Fibonacci(10)
 }
