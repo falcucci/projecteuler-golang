@@ -28,3 +28,17 @@ What is the largest prime factor of the number 600851475143 ?
 
 */
 package main
+
+import (
+	"fmt"
+)
+
+func GetPrimeFactors() error {
+	if err != nil {
+		return err
+	}
+}
+
+func main() {
+	fmt.Println("initial")
+}
